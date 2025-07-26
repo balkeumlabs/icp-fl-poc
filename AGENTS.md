@@ -1,0 +1,3 @@
+* must have a single component on the IC (must have a dfx.json in the repo)
+* heavily modify for FL so that it is used for uploading local model updates (in encrypted state) aggregating it in some central server that has a TEE (FedAvg) and having multiple cycles until convergence, and finally having the final global model inside a TEE (for closed sourced proprietary model). Ignore TEE for now if ICP doesn't have it, we can use regular central server role.
+* delete old scripts that we don't need anymore. 

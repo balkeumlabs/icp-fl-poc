@@ -1,0 +1,15 @@
+{
+  "canisters": {
+    "fl_canister": {
+      "type": "rust",
+      "candid": "src/fl_canister.did",
+      "package": "fl_canister"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "localhost:8000",
+      "type": "ephemeral"
+    }
+  }
+}

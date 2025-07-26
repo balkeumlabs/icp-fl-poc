@@ -1,0 +1,12 @@
+type ModelUpdate = blob;
+type GlobalModel = blob;
+type ClientId = nat;
+
+service : {
+  "upload_model_update": (ModelUpdate) -> ();
+  "get_global_model": () -> (GlobalModel) query;
+  "register_client": () -> (ClientId);
+  "run_aggregation": () -> ();
+  "start_new_cycle": () -> (nat64);
+  "get_symmetric_key_for_client": (blob) -> (text);
+};
