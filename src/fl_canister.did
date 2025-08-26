@@ -9,4 +9,14 @@ service : {
   "run_aggregation": () -> ();
   "start_new_cycle": () -> (nat64);
   "get_symmetric_key_for_client": (blob) -> (text);
+
+  // sMPC aggregation controls and endpoints
+  "get_aggregation_mode": () -> (text) query;
+  "set_aggregation_mode": (text) -> ();
+  "get_cycle_participants": (nat64) -> (vec ClientId) query;
+  // s_i = g_i_scaled - sum_j r_{i->j}
+  "upload_masked_update_s": (vec int64) -> ();
+  // t_j = sum_i r_{i->j}
+  "upload_mask_sum_t": (vec int64) -> ();
+  "run_smpc_aggregation": () -> ();
 };
